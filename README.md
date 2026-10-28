@@ -10,7 +10,33 @@ When you open a pull request or issue that is already open, the new tab closes a
 
 It works the same for links from Slack, email, your terminal, or GitHub itself.
 
-## Install
+## Install with an AI agent
+
+Paste this into Claude Code, or any coding agent that can run shell commands:
+
+````text
+Install the "GitHub tab dedupe" Chrome extension from https://github.com/sakce/gh-tab-dedupe for me.
+
+1. If ~/gh-tab-dedupe exists, run `git pull` in it. Otherwise clone the repo there.
+2. Read manifest.json, background.js, popup.html and popup.js. Confirm the extension
+   only touches github.com tabs and makes no network requests. Stop and tell me if
+   it does anything else.
+3. Copy the absolute path of the folder to my clipboard.
+4. Ask which Chromium browser I use (Chrome, Arc, Brave, Dia, Edge), and open its
+   extensions page for me if you can.
+5. Walk me through the steps you can't do for me, one at a time:
+   - Turn on Developer mode (top right).
+   - Click "Load unpacked". In the file picker, press Cmd+Shift+G (macOS) and paste
+     the path from my clipboard. If the extension is already installed, click its
+     reload icon instead.
+   - Pin it from the puzzle-piece menu so the icon stays in the toolbar.
+6. Tell me the keyboard shortcut for my OS from the README, and how to test it:
+   open any GitHub pull request in two tabs and check that the second one closes.
+````
+
+Chrome doesn't let agents or scripts click **Load unpacked**, so those steps stay with you.
+
+## Install by hand
 
 ```sh
 git clone https://github.com/sakce/gh-tab-dedupe.git
