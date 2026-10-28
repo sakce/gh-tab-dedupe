@@ -12,7 +12,7 @@ When you open a pull request or issue that is already open, the new tab closes a
 
 Click the extension icon to:
 
-- **Close duplicate tabs** that are already open, keeping the most recently used copy of each. The shortcut is `Alt+Shift+D`; change it at `chrome://extensions/shortcuts`.
+- **Close duplicate tabs** that are already open, keeping the most recently used copy of each. The shortcut is `Control+Shift+D` on macOS and `Alt+Shift+D` elsewhere; change it at `chrome://extensions/shortcuts`.
 - **Pause tab switching.** The icon shows `OFF` while paused.
 
 ## Install

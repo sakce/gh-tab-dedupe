@@ -14,7 +14,7 @@
   },
   "commands": {
     "close-duplicates": {
-      "suggested_key": { "default": "Alt+Shift+D" },
+      "suggested_key": { "default": "Alt+Shift+D", "mac": "MacCtrl+Shift+D" },
       "description": "Close duplicate pull request and issue tabs"
     }
   }
