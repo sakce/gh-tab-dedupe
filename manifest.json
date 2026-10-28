@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub tab dedupe",
+  "version": "1.1.0",
+  "description": "Opening a GitHub pull request or issue that is already open in a tab switches to that tab instead.",
+  "permissions": ["tabs", "webNavigation", "storage"],
+  "host_permissions": ["https://github.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "GitHub tab dedupe",
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "close-duplicates": {
+      "suggested_key": { "default": "Alt+Shift+D" },
+      "description": "Close duplicate pull request and issue tabs"
+    }
+  }
+}
