@@ -5,7 +5,11 @@ const pausedBox = document.getElementById("paused");
 async function showShortcut() {
   const commands = await chrome.commands.getAll();
   const shortcut = commands.find((c) => c.name === "close-duplicates")?.shortcut;
-  status.textContent = shortcut ? `Shortcut: ${shortcut}` : "";
+  status.replaceChildren();
+  if (!shortcut) return;
+  const key = document.createElement("kbd");
+  key.textContent = shortcut;
+  status.append("Shortcut ", key);
 }
 
 closeButton.addEventListener("click", async () => {
